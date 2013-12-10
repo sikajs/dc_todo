@@ -1,11 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
 * Ruby version
+This application is currently created with ruby 1.9.3 and rails 4.0.2
 
 * System dependencies
 
