@@ -1,10 +1,15 @@
 source 'https://rubygems.org'
 
+#I couldn't specify the version of ruby because I still need to develop on different platforms, such as Ubuntu and Windows 7
+#gem 'ruby', '~> 1.9.3'
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'
 
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+group :development, :test do
+  # Use sqlite3 as the database for Active Record
+  gem 'sqlite3', '1.3.8'
+end 
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'

@@ -1,6 +1,5 @@
 == README
 
-* Ruby version
 This application is currently created with ruby 1.9.3 and rails 4.0.2
 
 * System dependencies
