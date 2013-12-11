@@ -16,7 +16,7 @@
 /tmp
 
 # Ignore other unneeded files
-/*.swp
+*.swp
 *~
 .project
 .DS_Store

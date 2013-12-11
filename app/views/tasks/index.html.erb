@@ -13,9 +13,9 @@
     <tr>
       <td><%= task.title %></td>
       <td><%= task.desc %></td>
-      <td><% link_to 'Show'%></td>
-      <td><% link_to 'Edit'%></td>
-      <td><% link_to 'Delete'%></td>
+      <td><%= link_to 'Show', task %></td>
+      <td><%= link_to 'Edit', edit_task_path(task) %></td>
+      <td><%= link_to 'Delete'%></td>
     </tr>
   <% end %>
 </table>
