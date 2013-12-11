@@ -1,0 +1,21 @@
+﻿
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch 0.1
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	modified:   app/assets/javascripts/application.js
+#	modified:   app/assets/stylesheets/application.css
+#	modified:   app/controllers/tasks_controller.rb
+#	modified:   app/views/tasks/_form.html.erb
+#	modified:   app/views/tasks/index.html.erb
+#	modified:   app/views/tasks/show.html.erb
+#	new file:   db/migrate/20131211072544_add_complete_to_tasks.rb
+#	modified:   db/schema.rb
+#	new file:   vendor/assets/javascripts/bootstrap.js
+#	new file:   vendor/assets/javascripts/bootstrap.min.js
+#	new file:   vendor/assets/stylesheets/bootstrap.css
+#	new file:   vendor/assets/stylesheets/bootstrap.min.css
+#
+
