@@ -1,3 +1,4 @@
+<div class="container">
 <p>
   <strong>Title:</strong>
   <%= @task.title %>
@@ -20,5 +21,6 @@
   <strong>Completed at:</strong>
   <%= @task.completed_at %>
 </p>
-<%= link_to 'Back', tasks_path %>
+<%= link_to 'Back to task list', tasks_path %>
 | <%= link_to 'Edit', edit_task_path(@task) %>
+</div>

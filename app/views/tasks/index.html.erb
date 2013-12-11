@@ -1,15 +1,17 @@
+<div class="container">
 <h1>Listing tasks</h1>
-<div id="total_tasks">
-  Totally you have <%=pluralize( @tasks.count , "task")%> now.
+<div id="total_tasks" class="row">
+	<h4>Totally you have <%=pluralize( @tasks.count , "task")%> now.</h4>
 </div>
 <%= link_to 'Add new task', new_task_path %>
-<table>
+<div class="table-responsive">
+<table class="table table-bordered table-hover">
   <tr>
     <th>Title</th>
     <th>Edit</th>
     <th>Delete</th>
   </tr>
-
+  <tbody>
   <% @tasks.each do |task| %>
     <tr>
       <td><%= link_to task.title, task %></td>
@@ -17,5 +19,8 @@
 			<td><%= link_to 'Delete', task_path(task), 
 			        method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
-  <% end %>
+	<% end %>
+	</tbody>
 </table>
+</div>
+</div>
