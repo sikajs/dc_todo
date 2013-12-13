@@ -2,8 +2,13 @@ DcTodo::Application.routes.draw do
   get "staticpage/about"
   root "staticpage#about"
 
-  resources :tasks
-
+  resources :tasks do
+    member do
+	  patch 'complete'
+	end
+  end
+  #patch 'tasks/:id/complete' => 'tasks#complete'
+  
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

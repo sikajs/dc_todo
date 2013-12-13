@@ -5,18 +5,26 @@
 </div>
 <%= link_to 'Add new task', new_task_path %>
 <div class="table-responsive">
-<table class="table table-bordered table-hover">
+<table id="task_list" class="table table-bordered table-hover">
   <tr>
-    <th>Title</th>
+    <th id="task_title">Title</th>
     <th>Edit</th>
+    <th>Completed?</th>
     <th>Delete</th>
   </tr>
   <tbody>
   <% @tasks.each do |task| %>
     <tr>
       <td><%= link_to task.title, task %></td>
-      <td><%= link_to 'Edit', edit_task_path(task) %></td>
-			<td><%= link_to 'Delete', task_path(task), 
+	  <% if !task.completed %>
+		<td><%= link_to 'Edit', edit_task_path(task) %></td>
+		<td><%= link_to 'Mark completed', complete_task_path(task), 
+	                method: :patch, data: { confirm: 'Complete this task?' } %></td>
+	  <% else %>
+		<td></td><td>Completed</td>
+	  <% end %>
+	  
+	  <td><%= link_to 'Delete', task_path(task), 
 			        method: :delete, data: { confirm: 'Are you sure?' } %></td>
     </tr>
 	<% end %>

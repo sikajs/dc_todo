@@ -1,8 +1,9 @@
 class TasksController < ApplicationController
+  # action for creating one new todo task
   def new
     @task = Task.new
   end
-
+  
   def create
     @task = Task.new(params[:task].permit(:title, :desc))
 
@@ -13,14 +14,17 @@ class TasksController < ApplicationController
     end
   end
 
+  # action for listing todo task
   def index
     @tasks = Task.all
   end
   
+  # action for showing single todo task
   def show
     @task = Task.find(params[:id])
   end
 
+  # action for editing and updating todo task
   def edit
     @task = Task.find(params[:id])
   end
@@ -35,10 +39,24 @@ class TasksController < ApplicationController
     end
   end
 
-  def destroy
-		$task = Task.find(params[:id])
-		$task.destroy
+  # action for deleting todo task
+  def destroy	
+	$task = Task.find(params[:id])
+	$task.destroy
 
-		redirect_to tasks_path
+	redirect_to tasks_path
+  end
+  
+  # action for mark one todo task complete
+  def complete
+	@task = Task.find(params[:id])
+	@task.completed = TRUE;
+	@task.completed_at = Time.now;
+	
+	if @task.save
+      redirect_to @task
+    else
+      render 'index'
+    end
   end
 end
