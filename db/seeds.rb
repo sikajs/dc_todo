@@ -5,3 +5,6 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+5.times do |i|
+  Task.create(title: "Todo #{i}", desc: "The content of Todo#{i} ")
+end
