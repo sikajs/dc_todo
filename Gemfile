@@ -1,7 +1,8 @@
 source 'https://rubygems.org'
 
-#I couldn't specify the version of ruby because I still need to develop on different platforms, such as Ubuntu and Windows 7
-#gem 'ruby', '~> 1.9.3'
+ruby '1.9.3'
+# using gemset with rvm in linux, but it won't work in Windows
+#ruby-gemset=dc_todo
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.2'

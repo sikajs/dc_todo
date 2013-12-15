@@ -1,7 +1,10 @@
 == README
 
-This application is currently created with ruby 1.9.3 and rails 4.0.2
-
-Develop with sqlite3
+## Environment
+This application is currently created with 
+1. ruby 1.9.3
+2. rails 4.0.2
+3. Bootstrap 3.0.3
+4. sqlite3
 
 

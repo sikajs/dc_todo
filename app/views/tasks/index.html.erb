@@ -17,15 +17,15 @@
     <tr>
       <td><%= link_to task.title, task %></td>
 	  <% if !task.completed %>
-		<td><%= link_to 'Edit', edit_task_path(task) %></td>
+		<td><%= link_to 'Edit todo', edit_task_path(task), class: "btn btn-primary" %></td>
 		<td><%= link_to 'Mark completed', complete_task_path(task), 
-	                method: :patch, data: { confirm: 'Complete this task?' } %></td>
+	                method: :patch, data: { confirm: 'Complete this task?' }, class: "btn btn-success" %></td>
 	  <% else %>
 		<td></td><td>Completed</td>
 	  <% end %>
 	  
-	  <td><%= link_to 'Delete', task_path(task), 
-			        method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  <td><%= link_to 'Delete todo', task_path(task), 
+			        method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %></td>
     </tr>
 	<% end %>
 	</tbody>
